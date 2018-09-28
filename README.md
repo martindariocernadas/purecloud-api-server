@@ -26,8 +26,8 @@ Use cases : Purecloud App Token
 	"PureCloudCalls - RemoteManager (AR) agent status" :
 
 	{
-	  "client_id": "a3303c1d-cb8e-4c7c-ab30-..........",
-	  "client_secret": "UGtBIZhan1hVyaercPTKYUz2FICmw........",
+	  "client_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	  "client_secret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	  "environment": "mypurecloud.com",
 	  "api": "api.mypurecloud.com"
 	}
@@ -36,36 +36,26 @@ Use cases : Purecloud App Token
 
 		python agentStatus.py 8446
 
-	Or you can use the hosted version in :
+  invoking a sample "poc@mail.com" agente e-mail , to check if it is available:
 
-		http://bbvaarmaster.arg.igrupobbva:8446/
-
-  invoking a sample "poc@bbva.com" agente e-mail , to check if it is available:
-
-	GET http://bbvaarmaster.arg.igrupobbva:8446/agentStatus/poc@bbva.com/
+	GET http://<server>:8446/agentStatus/poc@mail.com/
 
   or locally :
 	
-	GET http://localhost:8446/agentStatus/poc@bbva.com/
+	GET http://localhost:8446/agentStatus/poc@mail.com/
 
 Result
 ------
 	<agentStatus.retrieveAgentStatus instance at 0x7f18a457c200>
-	poc@bbva.com/
-	Token success! 200 OK 2018-09-18T12:12:03
-	Users sucesss! 200 OK 2018-09-18T12:12:04
-	Agente POC BBVA
-	Users status sucesss! 200 OK 2018-09-18T12:12:04
+	poc@mail.com/
+	Token success! 200 OK 2099-09-18T12:12:03
+	Users sucesss! 200 OK 2099-09-18T12:12:04
+	Agent POC 
+	Users status sucesss! 200 OK 2099-09-18T12:12:04
 	1
-	Users status sucesss! 200 OK 2018-09-18T12:12:04 status_code=1
-	127.0.0.1:56408 - - [18/Sep/2018 12:12:04] "HTTP/1.1 GET /agentStatus/poc@bbva.com/" - 200 OK
+	Users status sucesss! 200 OK 2099-09-18T12:12:04 status_code=1
+	127.0.0.1:56408 - - [18/Sep/2099 12:12:04] "HTTP/1.1 GET /agentStatus/poc@mail.com/" - 200 OK
 
-Install as a service in systemd
--------------------------------
-
-	- Copy the "purecloudapi.service" to the systemd script folder, as "/etc/systemd/system/purecloudapi.service"
-	- Enable it, "systemctl enable purecloudapi.service"
-	- Start the service, "systemctl start purecloudapi.service" : its bash script is installed in "/usr/share/nginx/html/api" as default in Centos7 with Nginx.
 
 	
 
